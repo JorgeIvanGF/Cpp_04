@@ -6,11 +6,11 @@
 /*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 18:09:07 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/16 18:32:08 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/16 18:42:47 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "inc/Animal.hpp"
 
 int main()
 {
@@ -21,6 +21,9 @@ int main()
 	// Calling methods
 	a.getType();
 	meta->getType();
+
+	a.makeSoound();
+	meta->makeSoound();
    
 	// Manual Destruction of Animal
 	delete meta;

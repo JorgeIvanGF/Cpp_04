@@ -6,7 +6,7 @@
 /*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 17:01:58 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/16 18:29:48 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/16 18:37:01 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Animal
 		Animal& operator=(const Animal& other); // Assignment operator
 		~Animal();
 	
-		void makeSoound();
+		void makeSoound() const;
 		void getType() const;
 	
 };

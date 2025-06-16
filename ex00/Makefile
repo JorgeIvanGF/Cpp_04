@@ -13,7 +13,7 @@ NAME = Animal
 
 # Source files
 SRC = main.cpp \
-	  Animal.cpp
+	  src/Animal.cpp
 
 # obj files
 OBJ = $(SRC:.cpp=.o)
