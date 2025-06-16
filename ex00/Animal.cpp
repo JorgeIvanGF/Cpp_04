@@ -6,7 +6,7 @@
 /*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 17:39:31 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/16 18:07:25 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/16 18:29:35 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void makeSoound()
 	std::cout << "General sound emited\n";
 }
 
-void Animal::getType()
+void Animal::getType() const
 {
 	std::cout << "Animal type: " << YELLOW << _type << RESET << "\n";
 }

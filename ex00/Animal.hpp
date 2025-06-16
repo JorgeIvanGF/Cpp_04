@@ -6,7 +6,7 @@
 /*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 17:01:58 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/16 18:01:46 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/16 18:29:48 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Animal
 		~Animal();
 	
 		void makeSoound();
-		void getType();
+		void getType() const;
 	
 };
 
