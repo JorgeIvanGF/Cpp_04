@@ -6,7 +6,7 @@
 /*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 17:01:58 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/16 19:26:06 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/27 23:15:36 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Animal
 		Animal(const std::string& type);        // Param Constructor
 		Animal(const Animal& other);            // Copy Constructor
 		Animal& operator=(const Animal& other); // Assignment operator
-		~Animal();
+		virtual ~Animal();   // "virtual" to cleanup not only the base class, but the inherited too.
 	
 		virtual void makeSound() const; // Virtual for Polymorphism
 		std::string getType() const;

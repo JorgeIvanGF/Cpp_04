@@ -6,7 +6,7 @@
 /*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:54:37 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/27 21:54:40 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/27 22:35:34 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,35 @@
 Cat::Cat()
 {
 	_type = "Cat";
+	_brain = new Brain(); // allocate
 	std::cout << "Cat constructor called\n";
 }
 
 // Copy Constructor
 Cat::Cat(const Cat& other) : Animal(other)
 {
-	*this = other;
 	std::cout << "Cat copy constructor called" << std::endl;
+	_brain = new Brain(*other._brain); // deep copy
 }
 
 // Operator=
 Cat& Cat::operator=(const Cat& other)
 {
+	std::cout << "Cat assignment operator called" << std::endl;
 	if (this != &other)
-		this->_type = other._type;
+	{
+		Animal::operator=(other); // copy "_type"
+		if (_brain)
+			delete _brain;
+		_brain = new Brain(*other._brain); // deep copy
+	}
 	return *this;
 }
 
 //Destructor
 Cat::~Cat()
 {
+	delete _brain;
 	std::cout << "Cat destructor called\n";
 }
 

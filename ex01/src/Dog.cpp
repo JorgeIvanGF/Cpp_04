@@ -6,7 +6,7 @@
 /*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:54:47 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/27 22:26:50 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/27 23:22:24 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ Dog::Dog()
 // Copy Constructor
 Dog::Dog(const Dog& other) : Animal(other)
 {
-	*this = other;
 	std::cout << "Dog copy constructor called" << std::endl;
 	_brain = new Brain(*other._brain);
 }
@@ -33,7 +32,7 @@ Dog& Dog::operator=(const Dog& other)
 {
 	if (this != &other)
 	{
-		Animal::operator=(other); // Copy base part
+		Animal::operator=(other); // Copy "_type"
 		if(_brain)
 			delete _brain;
 		_brain = new Brain(*other._brain); // deep copy
