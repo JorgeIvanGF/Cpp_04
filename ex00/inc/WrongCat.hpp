@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 17:05:06 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/16 20:36:05 by jorgutie         ###   ########.fr       */
+/*   Created: 2025/06/27 20:31:53 by jorgutie          #+#    #+#             */
+/*   Updated: 2025/06/27 20:41:39 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal
 {
 	public:
-		Dog();                            // Default Constructor
-		Dog(const Dog& other);            // Copy Constructor
-		Dog& operator=(const Dog& other); // Assignment operator
-		~Dog();
-		
-		void makeSound() const;
-};
+		WrongCat();
+		WrongCat(const WrongCat& other);
+		WrongCat& operator=(const WrongCat& other);
+		~WrongCat();
 
+		void makeSound() const; // This hides, not overrides
+};
 
 #endif

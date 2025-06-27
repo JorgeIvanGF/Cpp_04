@@ -1,19 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/16 17:01:58 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/16 19:26:06 by jorgutie         ###   ########.fr       */
+/*   Created: 2025/06/27 20:30:13 by jorgutie          #+#    #+#             */
+/*   Updated: 2025/06/27 20:41:33 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
-
-#include <iostream>
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
 // Colors
 #define RESET   "\033[0m"
@@ -21,21 +19,21 @@
 #define MAGENTA "\033[0;35m"
 #define RED "\033[0;31m"
 
-class Animal
+#include <iostream>
+
+class WrongAnimal
 {
 	protected:
 		std::string _type;
-		
+
 	public:
-		Animal();                               // Default Constructor
-		Animal(const std::string& type);        // Param Constructor
-		Animal(const Animal& other);            // Copy Constructor
-		Animal& operator=(const Animal& other); // Assignment operator
-		~Animal();
-	
-		virtual void makeSound() const; // Virtual for Polymorphism
+		WrongAnimal();
+		WrongAnimal(const WrongAnimal& other);
+		WrongAnimal& operator=(const WrongAnimal& other);
+		~WrongAnimal();
+
+		void makeSound() const; // NOT virtual
 		std::string getType() const;
-	
 };
 
 #endif
