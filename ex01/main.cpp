@@ -6,7 +6,7 @@
 /*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 22:58:32 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/27 23:34:41 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/28 00:06:10 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #include "inc/Dog.hpp"
 #include "inc/Cat.hpp"
 
+#define N 4
 int main()
 {
-	std::cout << MAGENTA << "\nCreating Animals ===\n"<< RESET;
-
+    std::cout << MAGENTA << "\nCreating Animals ===\n"<< RESET;
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 
@@ -34,14 +34,45 @@ int main()
 	Dog dog1;
 	dog1.makeSound();
 
-	// Set an idea in dog1's brain
-	//dog1.getType(); // just for fun
-	// can't access _brain directly (private)
-
 	// Copy dog1 into dog2
+	std::cout << MAGENTA << "\nCopying Dogs\n"<< RESET;
 	Dog dog2 = dog1; // copy constructor
 
 	std::cout << MAGENTA << "Destroying dog1 and dog2...\n"<< RESET;
 
+	std::cout << L_GREEN << "\n..............next test............\n"<< RESET;
+
+    
+	std::cout << MAGENTA << "\nARRAY OF ANIMALS" << RESET << std::endl;
+
+	std::cout  << "Creating " << YELLOW << N << RESET <<" animals." << std::endl;
+
+	Animal* animals[N];
+
+	// Fill array: first half Dogs, second half Cats
+	for (int i = 0; i < N / 2; ++i)
+		animals[i] = new Dog();
+	for (int i = N / 2; i < N; ++i)
+		animals[i] = new Cat();
+
+	std::cout << MAGENTA << "\nDELETING ANIMALS" << RESET << std::endl;
+
+	for (int i = 0; i < N; ++i)
+		delete animals[i]; // should call proper destructors
+
+	std::cout << MAGENTA << "\nDEEP COPY TEST"<< RESET << std::endl;
+
+	Dog original;
+	Dog copy = original;
+
+	std::cout << "Original address: " << &original << std::endl;
+	std::cout << "Copy address    : " << &copy << std::endl;
+
+	std::cout << "Modifying copy's brain..." << std::endl;
+	copy.makeSound(); // still works
+
+	// You could add `setIdea()` and `getIdea()` accessors if you want to test brains directly
+
+	std::cout << MAGENTA << "\n Done " << RESET << std::endl;
 	return 0;
 }
