@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jorgutie <jorgutie@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 18:09:07 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/27 21:47:34 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/29 17:40:12 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ int main()
 
 	// Calling methods
 	std::cout << MAGENTA << "\nCalling methods:\n" << RESET;
-	std::cout << YELLOW << b->getType() << RESET << " makes sound: ";
+	std::cout << YELLOW << b->getType() << RESET << " makes sound: " << YELLOW;
 	b->makeSound(); // Woof woof!
-	std::cout << YELLOW << c->getType() << RESET << " makes sound: ";
+	std::cout << c->getType() << RESET << " makes sound: "<< YELLOW ;
 	c->makeSound(); // Meow meow!
-	std::cout << YELLOW << meta->getType() << RESET << " makes sound: ";
+	std::cout << meta->getType() << RESET << " makes sound: "<< YELLOW ;
 	meta->makeSound(); // *generic animal sound*
    
 	// Manual Destruction of Animal

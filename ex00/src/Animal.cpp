@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jorgutie <jorgutie@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 17:39:31 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/16 21:01:45 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/29 17:40:41 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Animal::~Animal()
 
 void Animal::makeSound() const
 {
-	std::cout << "General sound emited!!\n";
+	std::cout << "Generic sound emited!!\n";
 }
 
 std::string Animal::getType() const
