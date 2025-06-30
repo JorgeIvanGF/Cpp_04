@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jorgutie <jorgutie@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:54:47 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/27 23:22:24 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/30 16:44:58 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 Dog::Dog()
 {
 	_type = "Dog";
-	_brain = new Brain(); // "new" to allocates memory
+	_brain = new Brain(); // "new" to allocates memory dynamically
 	std::cout << "Dog default constructor Called" << std::endl;
 }
 
@@ -24,7 +24,7 @@ Dog::Dog()
 Dog::Dog(const Dog& other) : Animal(other)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
-	_brain = new Brain(*other._brain);
+	_brain = new Brain(*other._brain); // Deep Copy
 }
 
 // Operator=
@@ -34,7 +34,7 @@ Dog& Dog::operator=(const Dog& other)
 	{
 		Animal::operator=(other); // Copy "_type"
 		if(_brain)
-			delete _brain;
+			delete _brain; // delete old brain if exists
 		_brain = new Brain(*other._brain); // deep copy
 	}
 	return *this;

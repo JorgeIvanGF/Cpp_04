@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jorgutie <jorgutie@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:53:44 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/27 22:10:43 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/30 13:46:56 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class Dog : public Animal
 {
 	private:
-		Brain* _brain; //Brain Pointer
+		Brain* _brain; // //new attribute Brain Pointer
 	
 	public:
 		Dog();                            // Default Constructor

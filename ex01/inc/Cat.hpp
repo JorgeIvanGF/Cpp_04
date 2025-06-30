@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jorgutie <jorgutie@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 21:53:37 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/27 22:32:14 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/30 13:46:37 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Cat : public Animal //inherites
 {
 	private:
-		Brain* _brain;
+		Brain* _brain; //new attribute
 		
 	public:
 		Cat();                            // Default Constructor

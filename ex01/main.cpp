@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jorgutie <jorgutie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jorgutie <jorgutie@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/27 22:58:32 by jorgutie          #+#    #+#             */
-/*   Updated: 2025/06/28 00:06:10 by jorgutie         ###   ########.fr       */
+/*   Updated: 2025/06/29 17:47:39 by jorgutie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include "inc/Dog.hpp"
 #include "inc/Cat.hpp"
 
-#define N 4
+#define N 4 // Number of Animals for the array
+
 int main()
 {
     std::cout << MAGENTA << "\nCreating Animals ===\n"<< RESET;
